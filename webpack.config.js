@@ -44,7 +44,7 @@ module.exports = {
             },
 
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(png|jpe?g|gif|avif)$/i,
 
                 use: [
                     {
@@ -59,6 +59,11 @@ module.exports = {
                     },
                 ],
             },
+
+            {
+                test: /\.svg$/,
+                use: 'raw-loader'
+              },
 
             {
                 test: /\.(svg|eot|woff|woff2|ttf)$/,
@@ -112,18 +117,18 @@ module.exports = {
             template: "./src/index.html",
             filename: "index.html",
         }),
-        // new HtmlWebpackPlugin({
-        //     template: "./src/projects.html",
-        //     filename: "projects.html",
-        // }),
-        // new HtmlWebpackPlugin({
-        //     template: "./src/projects-details.html",
-        //     filename: "projects-details.html",
-        // }),
-        // new HtmlWebpackPlugin({
-        //     template: "./src/blog.html",
-        //     filename: "blog.html",
-        // }),
+        new HtmlWebpackPlugin({
+            template: "./src/the-tourist-tour.html",
+            filename: "the-tourist-tour.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/register.html",
+            filename: "register.html",
+        }),
+        new HtmlWebpackPlugin({
+            template: "./src/login.html",
+            filename: "login.html",
+        }),
         // new HtmlWebpackPlugin({
         //     template: "./src/blog-details.html",
         //     filename: "blog-details.html",

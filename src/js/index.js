@@ -4,3 +4,4 @@ import "jquery/dist/jquery.min.js";
 import "popper.js/dist/popper.min";
 import "@fortawesome/fontawesome-free/js/all.min.js";
 import "../scss/style.scss";
+

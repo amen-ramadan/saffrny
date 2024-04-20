@@ -9571,4 +9571,86 @@ a.text-dark:focus, a.text-dark:hover {
 /*!**************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/scss/style.scss ***!
   \**************************************************************************************************************/
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
 
+.container {
+  padding: 20px;
+}
+
+h2 {
+  color: #007bff;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: #3395ff;
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  color: #6c757d;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-text {
+  color: #555;
+  font-size: 16px;
+}
+
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.tour-description {
+  padding: 50px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.tour-gallery {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+.gallery-item img {
+  max-height: 300px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
