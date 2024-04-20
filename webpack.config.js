@@ -122,6 +122,10 @@ module.exports = {
             filename: "the-tourist-tour.html",
         }),
         new HtmlWebpackPlugin({
+            template: "./src/the-tourist-tour-2.html",
+            filename: "the-tourist-tour-2.html",
+        }),
+        new HtmlWebpackPlugin({
             template: "./src/register.html",
             filename: "register.html",
         }),
@@ -129,22 +133,6 @@ module.exports = {
             template: "./src/login.html",
             filename: "login.html",
         }),
-        // new HtmlWebpackPlugin({
-        //     template: "./src/blog-details.html",
-        //     filename: "blog-details.html",
-        // }),
-        // new HtmlWebpackPlugin({
-        //     template: "./src/add-blog.html",
-        //     filename: "add-blog.html",
-        // }),
-        // new HtmlWebpackPlugin({
-        //     template: "./src/about.html",
-        //     filename: "about.html",
-        // }),
-        // new HtmlWebpackPlugin({
-        //     template: "./src/contact.html",
-        //     filename: "contact.html",
-        // }),
         new MiniCssExtractPlugin({
             filename: "css/style.css", // اسم الملف النهائي الذي تريده والذي ينتج من ترجمة ملف ال scssفي src
         }),
