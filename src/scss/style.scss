@@ -43,6 +43,19 @@ p {
   background-color: lighten($primary-color, 10%);
 }
 
+.service-item {
+  text-align: center; // توسيط العناصر
+  background-color: #f8f9fa; // لون خلفية الخدمات
+  border-radius: 10px; // تدوير الزوايا
+  padding: 20px; // إضافة هامش داخلي
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // إضافة ظل
+}
+
+.service-item p {
+  margin-bottom: 0; // إزالة هامش أسفل الفقرة الأخيرة
+}
+
+
 .card {
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -91,3 +104,15 @@ p {
   transition: transform 0.3s ease-in-out;
 }
 
+/* أنماط الوضع الداكن */
+.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+
+
+.dark-mode .card {
+  background-color: #333; /* خلفية الكارد في وضع الداكن */
+  color: #fff; /* لون النص في وضع الداكن */
+}
