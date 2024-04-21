@@ -1,26 +1,48 @@
-// متغيرات الألوان
-$primary-color: #007bff; // لون أساسي
-$secondary-color: #6c757d; // لون ثانوي
-$success-color: #28a745; // لون نجاح
-$info-color: #17a2b8; // لون معلومات
-$warning-color: #ffc107; // لون تحذير
-$danger-color: #dc3545; // لون خطر
+@import "./variables";
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 1000
+
 
 // تنسيقات العناصر
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f8f9fa;
   color: #333;
+  font-family: "cairo";
 }
 
 .container {
   padding: 20px;
 }
 
-h2 {
+header {
+  margin-bottom: 40px;
+}
+
+.header-description {
+  font-size: 20px;
+    line-height: 2;
+    word-spacing: 2px;
+}
+
+h2.section-header {
   color: $primary-color;
   font-size: 28px;
   font-weight: bold;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+h2.section-header::before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  height: 4px;
+  transform: translateX(-50%);
+  width: 50px;
+  background-color: $primary-color;
 }
 
 p {
@@ -28,31 +50,43 @@ p {
   line-height: 1.6;
 }
 
-.btn {
+.btn-primary {
   background-color: $primary-color;
   color: #fff;
   border: none;
-  padding: 12px 24px;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
-.btn:hover {
-  background-color: lighten($primary-color, 10%);
+.btn-primary:hover {
+  background-color: darken($primary-color, 10%);
 }
 
 .service-item {
-  text-align: center; // توسيط العناصر
-  background-color: #f8f9fa; // لون خلفية الخدمات
-  border-radius: 10px; // تدوير الزوايا
-  padding: 20px; // إضافة هامش داخلي
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // إضافة ظل
+  text-align: center; 
+  border-radius: 10px; 
+  padding: 20px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  border: 2px solid $color-icon;
 }
 
 .service-item p {
-  margin-bottom: 0; // إزالة هامش أسفل الفقرة الأخيرة
+  margin-bottom: 0; 
+}
+
+
+.service-title {
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.service-description {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.service-icon {
+  color: $color-icon;
+  font-size: 34px;
 }
 
 
@@ -60,10 +94,12 @@ p {
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
+  transition: 0.3s;
 }
 
 .card:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 
 .card-title {
@@ -118,5 +154,67 @@ p {
 }
 
 
-// صفحة الرحلة الى تركيا 
+// icon dark mode style
+
+.toggle-switch {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  --light: #d8dbe0;
+  --dark: #28292c;
+  --link: rgb(27, 129, 112);
+  --link-hover: rgb(24, 94, 82);
+}
+
+.switch-label {
+  position: absolute;
+  width: 100%;
+  height: 25px;
+  background-color: var(--dark);
+  border-radius: 25px;
+  cursor: pointer;
+  border: 3px solid var(--dark);
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider {
+  background-color: var(--light);
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 12px -4px 0px 0px var(--light);
+  box-shadow: inset 12px -4px 0px 0px var(--light);
+  background-color: var(--dark);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.checkbox:checked ~ .slider::before {
+  -webkit-transform: translateX(25px);
+  -ms-transform: translateX(25px);
+  transform: translateX(25px);
+  background-color: var(--dark);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 
