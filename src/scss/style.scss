@@ -1,5 +1,6 @@
 @import "./variables";
 @import "./buttonDarkMode";
+@import "./the-tourist-tour-2.scss";
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 
 // تنسيقات العناصر
@@ -35,7 +36,7 @@ header {
 }
 
 .main-icon {
-  fill: #4ac396;
+  fill: $primary-color;
   height: 100px;
 
   @media (max-width: 380px) {

@@ -1,0 +1,31 @@
+
+
+.carousel {
+  width: 500px;
+  height: 330px;
+}
+
+.gallery-small-images {
+  img {
+    width: 300px;
+    // height: 275px;
+  }
+}
+
+
+.tour-title {
+  color: #555; /* لون عنوان القسم */
+}
+
+.tour-content {
+  line-height: 1.6;
+}
+
+.ordered-list {
+  list-style-type: decimal;
+  padding-left: 20px;
+}
+
+.ordered-list li {
+  margin-bottom: 10px;
+}
