@@ -174,21 +174,3 @@ p {
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
-
-
-.tour-gallery {
-  padding: 50px 0;
-}
-
-.gallery-item img {
-  max-height: 300px;
-  width: auto;
-  margin-bottom: 20px;
-}
-
-.gallery-item img:hover {
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
-}

@@ -9707,13 +9707,43 @@ a.text-dark:focus, a.text-dark:hover {
   color: #007bff;
 }
 .the-tourist-tour-2 .custom-carousel {
-  margin: 40px auto;
-  width: 500px;
-  height: 330px;
+  margin: 60px auto;
+  width: 70%;
+}
+@media (max-width: 768px) {
+  .the-tourist-tour-2 .custom-carousel {
+    width: 85%;
+  }
+}
+.the-tourist-tour-2 .custom-carousel img {
+  height: 460px;
+}
+@media (max-width: 1200px) {
+  .the-tourist-tour-2 .custom-carousel img {
+    height: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .the-tourist-tour-2 .custom-carousel img {
+    height: 280px;
+  }
 }
 
-.gallery-small-images img {
-  width: 300px;
+.gallery-small-images {
+  width: 90%;
+  margin: 0 auto;
+}
+.gallery-small-images div {
+  width: 25%;
+  padding: 0;
+}
+.gallery-small-images div img {
+  height: 100%;
+}
+@media (max-width: 576px) {
+  .gallery-small-images {
+    display: none;
+  }
 }
 
 body {
@@ -9877,21 +9907,4 @@ p {
 
 .contact-info {
   margin-top: 30px;
-}
-
-.tour-gallery {
-  padding: 50px 0;
-}
-
-.gallery-item img {
-  max-height: 300px;
-  width: auto;
-  margin-bottom: 20px;
-}
-
-.gallery-item img:hover {
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
 }
