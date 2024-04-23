@@ -9658,7 +9658,7 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .the-tourist-tour-2 {
-  margin-top: 50px;
+  margin: 50px 0;
 }
 .the-tourist-tour-2 header .main-icon {
   fill: #007bff;
@@ -9680,9 +9680,19 @@ a.text-dark:focus, a.text-dark:hover {
   border: 2px solid #007bff;
   border-radius: 25%;
 }
+@media (max-width: 576px) {
+  .the-tourist-tour-2 .tour-title {
+    font-size: 20px;
+  }
+}
 .the-tourist-tour-2 .tour-content {
   margin: 40px 0;
   font-size: 27px;
+}
+@media (max-width: 576px) {
+  .the-tourist-tour-2 .tour-content {
+    font-size: 18px;
+  }
 }
 .the-tourist-tour-2 .ordered-list {
   text-align: right;
@@ -9692,6 +9702,11 @@ a.text-dark:focus, a.text-dark:hover {
   position: relative;
   font-size: 16px;
   line-height: 1.9;
+}
+@media (max-width: 576px) {
+  .the-tourist-tour-2 .ordered-list li {
+    font-size: 14px;
+  }
 }
 .the-tourist-tour-2 .ordered-list li::before {
   content: "";

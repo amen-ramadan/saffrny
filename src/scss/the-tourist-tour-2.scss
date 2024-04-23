@@ -1,5 +1,5 @@
 .the-tourist-tour-2 {
-  margin-top: 50px;
+  margin: 50px 0;
   $primary-color: #007bff;
 
   header {
@@ -26,11 +26,17 @@
     margin: 0 auto 30px;
     border: 2px solid $primary-color;
     border-radius: $radius;
+    @include breakpoint(mobile) {
+      font-size: 20px;
+    }
   }
 
   .tour-content {
     margin: 40px 0;
     font-size: 27px;
+    @include breakpoint(mobile) {
+      font-size: 18px;
+    }
   }
 
   .ordered-list {
@@ -40,6 +46,9 @@
       position: relative;
       font-size: 16px;
       line-height: 1.9;
+      @include breakpoint(mobile) {
+        font-size: 14px;
+      }
 
       &::before {
         content: "";
