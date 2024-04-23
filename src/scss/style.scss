@@ -176,15 +176,8 @@ p {
 ////////////////////////////////////////////////////
 
 
-.tour-description {
-  padding: 50px 0;
-  background-color: #fff;
-  text-align: center;
-}
-
 .tour-gallery {
   padding: 50px 0;
-  background-color: #f8f9fa;
 }
 
 .gallery-item img {
@@ -194,6 +187,8 @@ p {
 }
 
 .gallery-item img:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
 }

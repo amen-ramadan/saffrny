@@ -9581,6 +9581,9 @@ a.text-dark:focus, a.text-dark:hover {
   background-color: #222;
   color: #fff;
 }
+.dark-mode hr {
+  border-top: 1px solid wheat;
+}
 
 .dark-mode .card {
   background-color: #333; /* خلفية الكارد في وضع الداكن */
@@ -9654,30 +9657,63 @@ a.text-dark:focus, a.text-dark:hover {
   box-shadow: none;
 }
 
-.carousel {
+.the-tourist-tour-2 {
+  margin-top: 50px;
+}
+.the-tourist-tour-2 header .main-icon {
+  fill: #007bff;
+}
+.the-tourist-tour-2 header .btn-primary-1 {
+  background-color: #007bff;
+}
+.the-tourist-tour-2 header .btn-primary-1:hover {
+  background-color: #0062cc;
+}
+.the-tourist-tour-2 .tour-title {
+  color: #007bff;
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto 30px;
+  border: 2px solid #007bff;
+  border-radius: 25%;
+}
+.the-tourist-tour-2 .tour-content {
+  margin: 40px 0;
+  font-size: 27px;
+}
+.the-tourist-tour-2 .ordered-list {
+  text-align: right;
+}
+.the-tourist-tour-2 .ordered-list li {
+  list-style: none;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.9;
+}
+.the-tourist-tour-2 .ordered-list li::before {
+  content: "";
+  border: 10px solid;
+  border-color: transparent #007bff transparent transparent;
+  position: absolute;
+  display: block;
+  top: 8px;
+  right: -18px;
+}
+.the-tourist-tour-2 .gallery-title {
+  text-align: center;
+  color: #007bff;
+}
+.the-tourist-tour-2 .custom-carousel {
+  margin: 40px auto;
   width: 500px;
   height: 330px;
 }
 
 .gallery-small-images img {
   width: 300px;
-}
-
-.tour-title {
-  color: #555; /* لون عنوان القسم */
-}
-
-.tour-content {
-  line-height: 1.6;
-}
-
-.ordered-list {
-  list-style-type: decimal;
-  padding-left: 20px;
-}
-
-.ordered-list li {
-  margin-bottom: 10px;
 }
 
 body {
@@ -9843,15 +9879,8 @@ p {
   margin-top: 30px;
 }
 
-.tour-description {
-  padding: 50px 0;
-  background-color: #fff;
-  text-align: center;
-}
-
 .tour-gallery {
   padding: 50px 0;
-  background-color: #f8f9fa;
 }
 
 .gallery-item img {
@@ -9861,6 +9890,8 @@ p {
 }
 
 .gallery-item img:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
 }

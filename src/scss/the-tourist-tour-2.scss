@@ -1,8 +1,66 @@
+.the-tourist-tour-2 {
+  margin-top: 50px;
+  $primary-color: #007bff;
 
+  header {
+    .main-icon {
+      fill: $primary-color;
+    }
 
-.carousel {
-  width: 500px;
-  height: 330px;
+    .btn-primary-1 {
+      background-color: $primary-color;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+
+  .tour-title {
+    color: $primary-color;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto 30px;
+    border: 2px solid $primary-color;
+    border-radius: $radius;
+  }
+
+  .tour-content {
+    margin: 40px 0;
+    font-size: 27px;
+  }
+
+  .ordered-list {
+    text-align: right;
+    li {
+      list-style: none;
+      position: relative;
+      font-size: 16px;
+      line-height: 1.9;
+
+      &::before {
+        content: "";
+        border: 10px solid;
+        border-color: transparent $primary-color transparent transparent;
+        position: absolute;
+        display: block;
+        top: 8px;
+        right: -18px;
+      }
+    }
+  }
+  .gallery-title {
+    text-align: center;
+    color: $primary-color;
+  }
+  .custom-carousel {
+    margin: 40px auto;
+    width: 500px;
+    height: 330px;
+  }
 }
 
 .gallery-small-images {
@@ -10,22 +68,4 @@
     width: 300px;
     // height: 275px;
   }
-}
-
-
-.tour-title {
-  color: #555; /* لون عنوان القسم */
-}
-
-.tour-content {
-  line-height: 1.6;
-}
-
-.ordered-list {
-  list-style-type: decimal;
-  padding-left: 20px;
-}
-
-.ordered-list li {
-  margin-bottom: 10px;
 }
