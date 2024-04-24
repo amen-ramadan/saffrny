@@ -174,3 +174,49 @@ p {
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
+// the-tourist-tour.html
+
+
+
+.custom-carousel {
+  margin: 60px auto;
+  width: 70%;
+  @include breakpoint(small) {
+    width: 85%;
+  }
+    img {
+      height: 460px;
+
+      @include breakpoint(large) {
+        height: 400px;
+      }
+      @include breakpoint(small) {
+        height: 280px;
+      }
+    }
+  
+}
+
+.gallery-small-images {
+  width: 90%;
+  margin: 0 auto;
+  div {
+    width:25%;
+    padding: 0;
+    img {
+      height: 100%;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.tour-content {
+  margin: 40px 0;
+  font-size: 27px;
+  @include breakpoint(mobile) {
+    font-size: 18px;
+  }
+}

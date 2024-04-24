@@ -9657,9 +9657,62 @@ a.text-dark:focus, a.text-dark:hover {
   box-shadow: none;
 }
 
-.the-tourist-tour-2 {
+.the-tourist-tour, .the-tourist-tour-2 {
   margin: 50px 0;
 }
+.the-tourist-tour header .main-icon, .the-tourist-tour-2 header .main-icon {
+  fill: #D4AF37;
+}
+.the-tourist-tour header .btn-primary-1, .the-tourist-tour-2 header .btn-primary-1 {
+  background-color: #D4AF37;
+}
+.the-tourist-tour header .btn-primary-1:hover, .the-tourist-tour-2 header .btn-primary-1:hover {
+  background-color: #b29126;
+}
+.the-tourist-tour .tour-title, .the-tourist-tour-2 .tour-title {
+  color: #D4AF37;
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto 30px;
+  border: 2px solid #D4AF37;
+  border-radius: 25%;
+}
+@media (max-width: 576px) {
+  .the-tourist-tour .tour-title, .the-tourist-tour-2 .tour-title {
+    font-size: 20px;
+  }
+}
+.the-tourist-tour .ordered-list, .the-tourist-tour-2 .ordered-list {
+  text-align: right;
+}
+.the-tourist-tour .ordered-list li, .the-tourist-tour-2 .ordered-list li {
+  list-style: none;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.9;
+}
+@media (max-width: 576px) {
+  .the-tourist-tour .ordered-list li, .the-tourist-tour-2 .ordered-list li {
+    font-size: 14px;
+  }
+}
+.the-tourist-tour .ordered-list li::before, .the-tourist-tour-2 .ordered-list li::before {
+  content: "";
+  border: 10px solid;
+  border-color: transparent #D4AF37 transparent transparent;
+  position: absolute;
+  display: block;
+  top: 8px;
+  right: -18px;
+}
+.the-tourist-tour .gallery-title, .the-tourist-tour-2 .gallery-title {
+  text-align: center;
+  color: #D4AF37;
+}
+
 .the-tourist-tour-2 header .main-icon {
   fill: #007bff;
 }
@@ -9671,94 +9724,13 @@ a.text-dark:focus, a.text-dark:hover {
 }
 .the-tourist-tour-2 .tour-title {
   color: #007bff;
-  font-size: 28px;
-  font-weight: bold;
-  position: relative;
-  padding: 20px;
-  width: 50%;
-  margin: 0 auto 30px;
   border: 2px solid #007bff;
-  border-radius: 25%;
-}
-@media (max-width: 576px) {
-  .the-tourist-tour-2 .tour-title {
-    font-size: 20px;
-  }
-}
-.the-tourist-tour-2 .tour-content {
-  margin: 40px 0;
-  font-size: 27px;
-}
-@media (max-width: 576px) {
-  .the-tourist-tour-2 .tour-content {
-    font-size: 18px;
-  }
-}
-.the-tourist-tour-2 .ordered-list {
-  text-align: right;
-}
-.the-tourist-tour-2 .ordered-list li {
-  list-style: none;
-  position: relative;
-  font-size: 16px;
-  line-height: 1.9;
-}
-@media (max-width: 576px) {
-  .the-tourist-tour-2 .ordered-list li {
-    font-size: 14px;
-  }
 }
 .the-tourist-tour-2 .ordered-list li::before {
-  content: "";
-  border: 10px solid;
   border-color: transparent #007bff transparent transparent;
-  position: absolute;
-  display: block;
-  top: 8px;
-  right: -18px;
 }
 .the-tourist-tour-2 .gallery-title {
-  text-align: center;
   color: #007bff;
-}
-.the-tourist-tour-2 .custom-carousel {
-  margin: 60px auto;
-  width: 70%;
-}
-@media (max-width: 768px) {
-  .the-tourist-tour-2 .custom-carousel {
-    width: 85%;
-  }
-}
-.the-tourist-tour-2 .custom-carousel img {
-  height: 460px;
-}
-@media (max-width: 1200px) {
-  .the-tourist-tour-2 .custom-carousel img {
-    height: 400px;
-  }
-}
-@media (max-width: 768px) {
-  .the-tourist-tour-2 .custom-carousel img {
-    height: 280px;
-  }
-}
-
-.gallery-small-images {
-  width: 90%;
-  margin: 0 auto;
-}
-.gallery-small-images div {
-  width: 25%;
-  padding: 0;
-}
-.gallery-small-images div img {
-  height: 100%;
-}
-@media (max-width: 576px) {
-  .gallery-small-images {
-    display: none;
-  }
 }
 
 body {
@@ -9922,4 +9894,54 @@ p {
 
 .contact-info {
   margin-top: 30px;
+}
+
+.custom-carousel {
+  margin: 60px auto;
+  width: 70%;
+}
+@media (max-width: 768px) {
+  .custom-carousel {
+    width: 85%;
+  }
+}
+.custom-carousel img {
+  height: 460px;
+}
+@media (max-width: 1200px) {
+  .custom-carousel img {
+    height: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .custom-carousel img {
+    height: 280px;
+  }
+}
+
+.gallery-small-images {
+  width: 90%;
+  margin: 0 auto;
+}
+.gallery-small-images div {
+  width: 25%;
+  padding: 0;
+}
+.gallery-small-images div img {
+  height: 100%;
+}
+@media (max-width: 576px) {
+  .gallery-small-images {
+    display: none;
+  }
+}
+
+.tour-content {
+  margin: 40px 0;
+  font-size: 27px;
+}
+@media (max-width: 576px) {
+  .tour-content {
+    font-size: 18px;
+  }
 }
