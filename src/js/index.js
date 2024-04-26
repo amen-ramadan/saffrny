@@ -8,10 +8,25 @@ import "../scss/style.scss";
 const darkModeToggle = document.getElementById('darkModeToggle');
 
 darkModeToggle.addEventListener('change', () => {
-  document.body.classList.toggle('dark-mode'); // تبديل الفئة dark-mode على الـ body
+  document.body.classList.toggle('dark-mode');
+  if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem("darkMode", "dark");
+  } else {
+    localStorage.setItem("darkMode", "light");
+  }
 });
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const savedMode = localStorage.getItem("darkMode");
+  if (savedMode === "dark") {
+    document.body.classList.add("dark-mode");
+    darkModeToggle.checked = true;
+  } else {
+    document.body.classList.remove("dark-mode");
+    darkModeToggle.checked = false;
+  }
+});
 
 
 
