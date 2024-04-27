@@ -9657,70 +9657,34 @@ a.text-dark:focus, a.text-dark:hover {
   box-shadow: none;
 }
 
-.the-tourist-tour, .the-tourist-tour-2 {
+.the-tourist-tour {
   margin: 50px 0;
 }
-.the-tourist-tour header .main-icon, .the-tourist-tour-2 header .main-icon {
-  fill: #D4AF37;
+.the-tourist-tour header .main-icon {
+  fill: #d4af37;
 }
-.the-tourist-tour header .btn-primary-1, .the-tourist-tour-2 header .btn-primary-1 {
-  background-color: #D4AF37;
+.the-tourist-tour .tour-title {
+  color: #d4af37;
+  border: 2px solid #d4af37;
 }
-.the-tourist-tour header .btn-primary-1:hover, .the-tourist-tour-2 header .btn-primary-1:hover {
+.the-tourist-tour .ordered-list li::before {
+  border-color: transparent #d4af37 transparent transparent;
+}
+.the-tourist-tour .gallery-title {
+  color: #d4af37;
+}
+.the-tourist-tour .btn-primary-1 {
+  background-color: #d4af37;
+}
+.the-tourist-tour .btn-primary-1:hover {
   background-color: #b29126;
 }
-.the-tourist-tour .tour-title, .the-tourist-tour-2 .tour-title {
-  color: #D4AF37;
-  font-size: 28px;
-  font-weight: bold;
-  position: relative;
-  padding: 20px;
-  width: 50%;
-  margin: 0 auto 30px;
-  border: 2px solid #D4AF37;
-  border-radius: 25%;
-}
-@media (max-width: 576px) {
-  .the-tourist-tour .tour-title, .the-tourist-tour-2 .tour-title {
-    font-size: 20px;
-  }
-}
-.the-tourist-tour .ordered-list, .the-tourist-tour-2 .ordered-list {
-  text-align: right;
-}
-.the-tourist-tour .ordered-list li, .the-tourist-tour-2 .ordered-list li {
-  list-style: none;
-  position: relative;
-  font-size: 16px;
-  line-height: 1.9;
-}
-@media (max-width: 576px) {
-  .the-tourist-tour .ordered-list li, .the-tourist-tour-2 .ordered-list li {
-    font-size: 14px;
-  }
-}
-.the-tourist-tour .ordered-list li::before, .the-tourist-tour-2 .ordered-list li::before {
-  content: "";
-  border: 10px solid;
-  border-color: transparent #D4AF37 transparent transparent;
-  position: absolute;
-  display: block;
-  top: 8px;
-  right: -18px;
-}
-.the-tourist-tour .gallery-title, .the-tourist-tour-2 .gallery-title {
-  text-align: center;
-  color: #D4AF37;
-}
 
+.the-tourist-tour-2 {
+  margin: 50px 0;
+}
 .the-tourist-tour-2 header .main-icon {
   fill: #007bff;
-}
-.the-tourist-tour-2 header .btn-primary-1 {
-  background-color: #007bff;
-}
-.the-tourist-tour-2 header .btn-primary-1:hover {
-  background-color: #0062cc;
 }
 .the-tourist-tour-2 .tour-title {
   color: #007bff;
@@ -9731,6 +9695,16 @@ a.text-dark:focus, a.text-dark:hover {
 }
 .the-tourist-tour-2 .gallery-title {
   color: #007bff;
+}
+.the-tourist-tour-2 .btn-primary-1 {
+  background-color: #007bff;
+}
+.the-tourist-tour-2 .btn-primary-1:hover {
+  background-color: #0062cc;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -9743,22 +9717,23 @@ body {
   padding: 20px;
 }
 
-header {
+nav {
   margin-bottom: 40px;
+  margin-top: 40px;
 }
 @media (max-width: 992px) {
-  header {
+  nav {
     flex-direction: column-reverse;
     gap: 30px;
   }
 }
-header .header-description {
+nav .header-description {
   font-size: 20px;
   line-height: 2;
   word-spacing: 2px;
 }
 @media (max-width: 576px) {
-  header .header-description {
+  nav .header-description {
     font-size: 16px;
     line-height: 1.5;
     word-spacing: 1px;
@@ -9787,6 +9762,7 @@ h2.section-header {
   font-weight: bold;
   position: relative;
   margin-bottom: 50px;
+  margin-top: 150px;
 }
 @media (max-width: 576px) {
   h2.section-header {
@@ -9819,6 +9795,14 @@ p {
 
 .btn-primary-1:hover {
   background-color: #36a47b;
+}
+
+.nav-item .nav-link {
+  color: #4ac396;
+}
+
+#services {
+  margin-top: 50px;
 }
 
 .service-item {
@@ -9944,4 +9928,59 @@ p {
   .tour-content {
     font-size: 18px;
   }
+}
+
+.tour-title {
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto 30px;
+  border: 2px solid #4ac396;
+  border-radius: 25%;
+}
+@media (max-width: 576px) {
+  .tour-title {
+    font-size: 20px;
+  }
+}
+
+.ordered-list {
+  text-align: right;
+}
+.ordered-list li {
+  list-style: none;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.9;
+}
+@media (max-width: 576px) {
+  .ordered-list li {
+    font-size: 14px;
+  }
+}
+.ordered-list li::before {
+  content: "";
+  border: 10px solid;
+  position: absolute;
+  display: block;
+  top: 8px;
+  right: -18px;
+}
+
+#footer {
+  margin-top: 100px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#footer p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+#author {
+  font-weight: bold;
 }

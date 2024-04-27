@@ -1,23 +1,68 @@
 // متغيرات الألوان
 $primary-color: #4ac396; // index.html
 $secondary-color: #6c757d; // لون ثانوي
-$the-tourist-tour-2-color: #007bff;
-$the-tourist-tour-color: #D4AF37;
+$the-tourist-tour-2-color: #007bff; // لون صفحة الرحلة الى تركيا
+$the-tourist-tour-color: #d4af37; // لون صفحة الرحلة الى الاهرامات
 
 $radius: 25%;
 
 // responsive
 @mixin breakpoint($point) {
   @if $point == mobile {
-    @media (max-width: 576px) { @content; }
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $point == small {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (max-width: 1200px) {
+      @content;
+    }
   }
-  @else if $point == small {
-    @media (max-width: 768px) { @content; }
-  }
-  @else if $point == medium {
-    @media (max-width: 992px) { @content; }
-  }
-  @else if $point == large {
-    @media (max-width: 1200px) { @content; }
+}
+
+// mixins
+
+@mixin color-page($color, $pageName) {
+  .#{$pageName} {
+    $primary-color: $color;
+    margin: 50px 0;
+
+    header {
+      .main-icon {
+        fill: $primary-color;
+      }
+    }
+
+    .tour-title {
+      color: $primary-color;
+      border: 2px solid $primary-color;
+    }
+
+    .ordered-list {
+      li {
+        &::before {
+          border-color: transparent $primary-color transparent transparent;
+        }
+      }
+    }
+
+    .gallery-title {
+      color: $primary-color;
+    }
+
+    .btn-primary-1 {
+      background-color: $primary-color;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
   }
 }

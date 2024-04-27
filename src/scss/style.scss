@@ -1,9 +1,13 @@
 @import "./variables";
 @import "./buttonDarkMode";
 @import "./the-tourist-tour-2.scss";
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
 
-// تنسيقات العناصر
+// global and header
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #f8f9fa;
   color: #333;
@@ -14,8 +18,9 @@ body {
   padding: 20px;
 }
 
-header {
+nav {
   margin-bottom: 40px;
+  margin-top: 40px;
 
   @include breakpoint(medium) {
     flex-direction: column-reverse;
@@ -56,6 +61,7 @@ h2.section-header {
   font-weight: bold;
   position: relative;
   margin-bottom: 50px;
+  margin-top: 150px;
 
   @include breakpoint(mobile) {
     font-size: 20px;
@@ -94,6 +100,15 @@ p {
 //////////////////////////////////////////////////////////
 // index.html
 
+.nav-item {
+  .nav-link {
+    color: $primary-color;
+  }
+}
+
+#services {
+  margin-top: 50px;
+}
 
 .service-item {
   text-align: center;
@@ -115,13 +130,11 @@ p {
     height: initial;
     padding: 20px 10px;
   }
-
 }
 
 .service-item p {
   margin-bottom: 0;
 }
-
 
 .service-title {
   font-weight: 700;
@@ -137,7 +150,6 @@ p {
   color: $primary-color;
   font-size: 34px;
 }
-
 
 .card {
   border-radius: 15px;
@@ -170,13 +182,10 @@ p {
   margin-top: 30px;
 }
 
-
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
-// the-tourist-tour.html
-
-
+// تنسيقات صفحات الرحلات
 
 .custom-carousel {
   margin: 60px auto;
@@ -184,24 +193,23 @@ p {
   @include breakpoint(small) {
     width: 85%;
   }
-    img {
-      height: 460px;
+  img {
+    height: 460px;
 
-      @include breakpoint(large) {
-        height: 400px;
-      }
-      @include breakpoint(small) {
-        height: 280px;
-      }
+    @include breakpoint(large) {
+      height: 400px;
     }
-  
+    @include breakpoint(small) {
+      height: 280px;
+    }
+  }
 }
 
 .gallery-small-images {
   width: 90%;
   margin: 0 auto;
   div {
-    width:25%;
+    width: 25%;
     padding: 0;
     img {
       height: 100%;
@@ -219,4 +227,59 @@ p {
   @include breakpoint(mobile) {
     font-size: 18px;
   }
+}
+
+.tour-title {
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  padding: 20px;
+  width: 50%;
+  margin: 0 auto 30px;
+  border: 2px solid $primary-color;
+  border-radius: $radius;
+
+  @include breakpoint(mobile) {
+    font-size: 20px;
+  }
+}
+
+.ordered-list {
+  text-align: right;
+
+  li {
+    list-style: none;
+    position: relative;
+    font-size: 16px;
+    line-height: 1.9;
+
+    @include breakpoint(mobile) {
+      font-size: 14px;
+    }
+
+    &::before {
+      content: "";
+      border: 10px solid;
+      position: absolute;
+      display: block;
+      top: 8px;
+      right: -18px;
+    }
+  }
+}
+
+#footer {
+  margin-top: 100px;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#footer p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+#author {
+  font-weight: bold;
 }

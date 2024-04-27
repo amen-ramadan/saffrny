@@ -16,7 +16,7 @@ darkModeToggle.addEventListener('change', () => {
   }
 });
 
-
+// check local storage when loaded pages
 document.addEventListener('DOMContentLoaded', () => {
   const savedMode = localStorage.getItem("darkMode");
   if (savedMode === "dark") {
@@ -29,13 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-// هذا الكود تم وضعه داخل الملف  the-tourist-tour-2.html
-
-// function enlargeImage(index) {
-//   // تكبير الصورة المختارة في الكاروسيل
-//   document.querySelectorAll('.carousel-item').forEach(item => {
-//     item.classList.remove('active');
-//   });
-//   document.querySelectorAll('.carousel-item')[index - 1].classList.add('active');
-// }
+// code for footer 
+    document.addEventListener('DOMContentLoaded', function() {
+        var currentDate = new Date();
+        var currentYear = currentDate.getFullYear();
+        var footer = document.getElementById('footer');
+        var copyright = document.getElementById('copyright');
+        copyright.innerHTML = "&copy; " + currentYear + "سفرني";
+    });
