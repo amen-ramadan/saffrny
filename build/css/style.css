@@ -9591,6 +9591,7 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .toggle-switch {
+  margin: 8px 20px;
   position: relative;
   width: 50px;
   height: 25px;
@@ -9719,13 +9720,36 @@ body {
 
 nav {
   margin-bottom: 40px;
-  margin-top: 40px;
+  margin-top: 20px;
+  color: #4ac396;
 }
-@media (max-width: 992px) {
-  nav {
-    flex-direction: column-reverse;
-    gap: 30px;
-  }
+nav ul li {
+  text-align: right;
+  padding-right: 20px;
+  margin-top: 10px;
+}
+nav .icon-burger {
+  width: 20px;
+  height: 14px;
+  cursor: pointer;
+  position: relative;
+}
+nav .icon-burger span {
+  background-color: rgb(88, 84, 84);
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  transition: all 0.3s ease;
+}
+nav .icon-burger span:first-child {
+  top: 0;
+}
+nav .icon-burger span:nth-child(2) {
+  top: 6px;
+}
+nav .icon-burger span:nth-child(3) {
+  top: 12px;
 }
 nav .header-description {
   font-size: 20px;
@@ -9742,7 +9766,7 @@ nav .header-description {
 
 .main-icon {
   fill: #4ac396;
-  height: 100px;
+  height: 80px;
 }
 @media (max-width: 380px) {
   .main-icon {

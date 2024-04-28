@@ -69,11 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
 //   height: 14px;
 //   cursor: pointer;
 //   position: relative;
-//   display: none;
-
-//   @include breakpoint(medium) {
-//     display: block;
-//   }
 //   span {
 //     background-color: black;
 //     height: 2px;
