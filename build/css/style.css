@@ -9660,7 +9660,7 @@ a.text-dark:focus, a.text-dark:hover {
 .the-tourist-tour {
   margin: 50px 0;
 }
-.the-tourist-tour header .main-icon {
+.the-tourist-tour nav .main-icon {
   fill: #d4af37;
 }
 .the-tourist-tour .tour-title {
@@ -9683,7 +9683,7 @@ a.text-dark:focus, a.text-dark:hover {
 .the-tourist-tour-2 {
   margin: 50px 0;
 }
-.the-tourist-tour-2 header .main-icon {
+.the-tourist-tour-2 nav .main-icon {
   fill: #007bff;
 }
 .the-tourist-tour-2 .tour-title {
