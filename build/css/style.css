@@ -9592,6 +9592,7 @@ a.text-dark:focus, a.text-dark:hover {
 
 .toggle-switch {
   margin: 8px 20px;
+  text-align: left;
   position: relative;
   width: 50px;
   height: 25px;
@@ -9602,7 +9603,7 @@ a.text-dark:focus, a.text-dark:hover {
 }
 @media (max-width: 992px) {
   .toggle-switch {
-    margin-left: -30px;
+    margin-left: auto;
   }
 }
 
@@ -9886,7 +9887,7 @@ p {
 }
 
 .card-title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
 }
 

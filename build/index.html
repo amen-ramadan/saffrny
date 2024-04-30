@@ -7,24 +7,12 @@
   <script defer src="/js/bundle.js"></script><link href="/css/style.css" rel="stylesheet"></head>
 
   <body>
-    <nav class="navbar navbar-expand-lg" dir="rtl">
-      <button
-        class="navbar-toggler icon-burger mr-3"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-        <span class="navbar-toggler-icon"></span>
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <nav class="navbar navbar-expand-lg">
+      
       <div
         class="d-flex align-items-center justify-content-between navbar-brand"
       >
-        <h1 class="ml-3 mb-4 main-title">سفّرني</h1>
+        <h1 class="mr-3 mb-4 main-title">سفّرني</h1>
         <a href="#">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -44,9 +32,24 @@
         </a>
       </div>
 
+      <button
+        class="navbar-toggler icon-burger mr-3"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item toggle-switch form-check form-switch">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <div class=" toggle-switch form-check form-switch">
             <label class="switch-label">
               <input
                 type="checkbox"
@@ -55,6 +58,7 @@
               />
               <span class="slider"></span>
             </label>
+          </div>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#services">الخدمات</a>
