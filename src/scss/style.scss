@@ -12,6 +12,9 @@ body {
   background-color: #f8f9fa;
   color: #333;
   font-family: "cairo";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .container {
@@ -19,9 +22,16 @@ body {
 }
 
 nav {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-top: 20px;
   color: $primary-color;
+  padding-left: 35px !important;
+  padding-right: 35px !important;
+
+  @include breakpoint(mobile) {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
 
   ul {
     li {
@@ -75,14 +85,15 @@ nav {
   fill: $primary-color;
   height: 80px;
 
-  @media (max-width: 380px) {
-    height: 75px !important;
+  @include breakpoint(mobile) {
+    height: 60px;
   }
 }
 
 .main-title {
-  @media (max-width: 380px) {
-    font-size: 34px;
+
+  @include breakpoint(mobile) {
+    font-size: 28px;
   }
 }
 
@@ -92,7 +103,7 @@ h2.section-header {
   font-weight: bold;
   position: relative;
   margin-bottom: 50px;
-  margin-top: 150px;
+  margin-top: 50px;
 
   @include breakpoint(mobile) {
     font-size: 20px;
@@ -120,6 +131,11 @@ p {
   color: #fff;
   border: none;
   transition: all 0.3s ease;
+
+  @include breakpoint(mobile) {
+    font-size: 14px;
+    padding: 8px; 
+  }
 }
 
 .btn-primary-1:hover {
@@ -136,6 +152,78 @@ p {
     color: $primary-color;
   }
 }
+
+// main carousel
+
+.custom-main-carousel {
+  height: 75vh;
+
+  @media (max-width: 700px) {
+    height: 50vh;
+  }
+
+  @include breakpoint(mobile) {
+    height: 30vh;
+  }
+
+  
+  .carousel-inner {
+    height: 100%;
+
+    .carousel-item {
+      position: relative;
+    }
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .layout-content {
+      position: absolute;
+      background-color: darken($primary-color, 33%);
+      opacity: 0.8;
+      width: 100%;
+      height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+      z-index: 99;
+
+      .layout-header {
+        font-weight: bold;
+        margin-top: 150px;
+
+        @include breakpoint(small) {
+          font-size: 20px;
+        }
+
+        @include breakpoint(mobile) {
+          font-size: 18px;
+          margin-top: 50px;
+        }
+      }
+      .layout-description {
+        margin-top: 30px;
+        padding: 20px 50px;
+
+        @include breakpoint(small) {
+          font-size: 16px;
+          padding: 10px 20px;
+        }
+
+        @include breakpoint(mobile) {
+          font-size: 14px;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}
+
+
+// services
 
 #services {
   margin-top: 50px;
@@ -170,11 +258,19 @@ p {
 .service-title {
   font-weight: 700;
   margin: 20px 0;
+
+  @include breakpoint(small) {
+    font-size: 20px;
+  }
 }
 
 .service-description {
   font-size: 16px;
   line-height: 1.7;
+
+  @include breakpoint(small) {
+    font-size: 14px;
+  }
 }
 
 .service-icon {
@@ -182,11 +278,17 @@ p {
   font-size: 34px;
 }
 
+// cards
+
 .card {
   border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
   transition: 0.3s;
+  height: 100%;
+  @include breakpoint(mobile) {
+    height: initial;
+  }
 }
 
 .card:hover {
@@ -213,6 +315,10 @@ p {
   margin-top: 30px;
 }
 
+
+iframe {
+  width: 50%;
+}
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
@@ -232,6 +338,10 @@ p {
     }
     @include breakpoint(small) {
       height: 280px;
+    }
+
+    @include breakpoint(mobile) {
+      height: 230px;
     }
   }
 }
@@ -254,9 +364,10 @@ p {
 
 .tour-content {
   margin: 40px 0;
-  font-size: 27px;
+  font-size: 24px;
+  line-height: 1.8;
   @include breakpoint(mobile) {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -269,9 +380,15 @@ p {
   margin: 0 auto 30px;
   border: 2px solid $primary-color;
   border-radius: $radius;
+  line-height: 1.8;
 
+  @include breakpoint(medium) {
+    font-size: 24px;
+    width: 75%;
+  }
   @include breakpoint(mobile) {
     font-size: 20px;
+    word-spacing: 3px;
   }
 }
 
@@ -299,6 +416,9 @@ p {
   }
 }
 
+
+// all pages
+
 #footer {
   margin-top: 100px;
   padding: 20px 0;
@@ -313,4 +433,11 @@ p {
 
 #author {
   font-weight: bold;
+}
+
+
+
+//// الفورم الخاص بصفحة تسجيل حساب وتسجيل الدخول
+form {
+  text-align: right;
 }

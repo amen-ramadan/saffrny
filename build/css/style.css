@@ -9659,11 +9659,59 @@ a.text-dark:focus, a.text-dark:hover {
   box-shadow: none;
 }
 
-.the-tourist-tour {
-  margin: 50px 0;
+.the-tourist-tour .row,
+.the-tourist-tour .col-10,
+.the-tourist-tour .col-2 {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.the-tourist-tour .image-background {
+  margin-bottom: 30px;
+}
+.the-tourist-tour .image-background .image {
+  background-image: url(../images/4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  width: 100%;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .the-tourist-tour .image-background .image {
+    height: 50vh;
+  }
+}
+.the-tourist-tour .image-background .image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.the-tourist-tour .image-background .text {
+  background-color: #886f1d;
+  width: 100%;
+  font-size: 24px;
+  padding: 20px;
+  color: #d6d6d6;
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .the-tourist-tour .image-background .text {
+    font-size: 20px;
+  }
+}
+.the-tourist-tour nav .nav-item .nav-link {
+  color: #d4af37;
 }
 .the-tourist-tour nav .main-icon {
   fill: #d4af37;
+}
+.the-tourist-tour nav .main-title {
+  color: #d4af37;
 }
 .the-tourist-tour .tour-title {
   color: #d4af37;
@@ -9672,8 +9720,12 @@ a.text-dark:focus, a.text-dark:hover {
 .the-tourist-tour .ordered-list li::before {
   border-color: transparent #d4af37 transparent transparent;
 }
-.the-tourist-tour .gallery-title {
+.the-tourist-tour .section-header {
   color: #d4af37;
+  text-align: center;
+}
+.the-tourist-tour .section-header::before {
+  background-color: #d4af37;
 }
 .the-tourist-tour .btn-primary-1 {
   background-color: #d4af37;
@@ -9682,11 +9734,59 @@ a.text-dark:focus, a.text-dark:hover {
   background-color: #b29126;
 }
 
-.the-tourist-tour-2 {
-  margin: 50px 0;
+.the-tourist-tour-2 .row,
+.the-tourist-tour-2 .col-10,
+.the-tourist-tour-2 .col-2 {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.the-tourist-tour-2 .image-background {
+  margin-bottom: 30px;
+}
+.the-tourist-tour-2 .image-background .image {
+  background-image: url(../images/t8.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  width: 100%;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .the-tourist-tour-2 .image-background .image {
+    height: 50vh;
+  }
+}
+.the-tourist-tour-2 .image-background .image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.the-tourist-tour-2 .image-background .text {
+  background-color: #004a99;
+  width: 100%;
+  font-size: 24px;
+  padding: 20px;
+  color: #d6d6d6;
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .the-tourist-tour-2 .image-background .text {
+    font-size: 20px;
+  }
+}
+.the-tourist-tour-2 nav .nav-item .nav-link {
+  color: #007bff;
 }
 .the-tourist-tour-2 nav .main-icon {
   fill: #007bff;
+}
+.the-tourist-tour-2 nav .main-title {
+  color: #007bff;
 }
 .the-tourist-tour-2 .tour-title {
   color: #007bff;
@@ -9695,8 +9795,12 @@ a.text-dark:focus, a.text-dark:hover {
 .the-tourist-tour-2 .ordered-list li::before {
   border-color: transparent #007bff transparent transparent;
 }
-.the-tourist-tour-2 .gallery-title {
+.the-tourist-tour-2 .section-header {
   color: #007bff;
+  text-align: center;
+}
+.the-tourist-tour-2 .section-header::before {
+  background-color: #007bff;
 }
 .the-tourist-tour-2 .btn-primary-1 {
   background-color: #007bff;
@@ -9713,6 +9817,9 @@ body {
   background-color: #f8f9fa;
   color: #333;
   font-family: "cairo";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .container {
@@ -9720,9 +9827,17 @@ body {
 }
 
 nav {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   margin-top: 20px;
   color: #4ac396;
+  padding-left: 35px !important;
+  padding-right: 35px !important;
+}
+@media (max-width: 576px) {
+  nav {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
 }
 nav ul li {
   text-align: right;
@@ -9769,15 +9884,15 @@ nav .header-description {
   fill: #4ac396;
   height: 80px;
 }
-@media (max-width: 380px) {
+@media (max-width: 576px) {
   .main-icon {
-    height: 75px !important;
+    height: 60px;
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 576px) {
   .main-title {
-    font-size: 34px;
+    font-size: 28px;
   }
 }
 
@@ -9787,7 +9902,7 @@ h2.section-header {
   font-weight: bold;
   position: relative;
   margin-bottom: 50px;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 @media (max-width: 576px) {
   h2.section-header {
@@ -9817,6 +9932,12 @@ p {
   border: none;
   transition: all 0.3s ease;
 }
+@media (max-width: 576px) {
+  .btn-primary-1 {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
 
 .btn-primary-1:hover {
   background-color: #36a47b;
@@ -9824,6 +9945,74 @@ p {
 
 .nav-item .nav-link {
   color: #4ac396;
+}
+
+.custom-main-carousel {
+  height: 75vh;
+}
+@media (max-width: 700px) {
+  .custom-main-carousel {
+    height: 50vh;
+  }
+}
+@media (max-width: 576px) {
+  .custom-main-carousel {
+    height: 30vh;
+  }
+}
+.custom-main-carousel .carousel-inner {
+  height: 100%;
+}
+.custom-main-carousel .carousel-inner .carousel-item {
+  position: relative;
+}
+.custom-main-carousel .carousel-inner img {
+  height: 100%;
+  object-fit: cover;
+}
+.custom-main-carousel .carousel-inner .layout-content {
+  position: absolute;
+  background-color: #194c39;
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  z-index: 99;
+}
+.custom-main-carousel .carousel-inner .layout-content .layout-header {
+  font-weight: bold;
+  margin-top: 150px;
+}
+@media (max-width: 768px) {
+  .custom-main-carousel .carousel-inner .layout-content .layout-header {
+    font-size: 20px;
+  }
+}
+@media (max-width: 576px) {
+  .custom-main-carousel .carousel-inner .layout-content .layout-header {
+    font-size: 18px;
+    margin-top: 50px;
+  }
+}
+.custom-main-carousel .carousel-inner .layout-content .layout-description {
+  margin-top: 30px;
+  padding: 20px 50px;
+}
+@media (max-width: 768px) {
+  .custom-main-carousel .carousel-inner .layout-content .layout-description {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+@media (max-width: 576px) {
+  .custom-main-carousel .carousel-inner .layout-content .layout-description {
+    font-size: 14px;
+    padding: 0 10px;
+  }
 }
 
 #services {
@@ -9863,10 +10052,20 @@ p {
   font-weight: 700;
   margin: 20px 0;
 }
+@media (max-width: 768px) {
+  .service-title {
+    font-size: 20px;
+  }
+}
 
 .service-description {
   font-size: 16px;
   line-height: 1.7;
+}
+@media (max-width: 768px) {
+  .service-description {
+    font-size: 14px;
+  }
 }
 
 .service-icon {
@@ -9879,6 +10078,12 @@ p {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
   transition: 0.3s;
+  height: 100%;
+}
+@media (max-width: 576px) {
+  .card {
+    height: initial;
+  }
 }
 
 .card:hover {
@@ -9905,6 +10110,10 @@ p {
   margin-top: 30px;
 }
 
+iframe {
+  width: 50%;
+}
+
 .custom-carousel {
   margin: 60px auto;
   width: 70%;
@@ -9927,6 +10136,11 @@ p {
     height: 280px;
   }
 }
+@media (max-width: 576px) {
+  .custom-carousel img {
+    height: 230px;
+  }
+}
 
 .gallery-small-images {
   width: 90%;
@@ -9947,11 +10161,12 @@ p {
 
 .tour-content {
   margin: 40px 0;
-  font-size: 27px;
+  font-size: 24px;
+  line-height: 1.8;
 }
 @media (max-width: 576px) {
   .tour-content {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -9964,10 +10179,18 @@ p {
   margin: 0 auto 30px;
   border: 2px solid #4ac396;
   border-radius: 25%;
+  line-height: 1.8;
+}
+@media (max-width: 992px) {
+  .tour-title {
+    font-size: 24px;
+    width: 75%;
+  }
 }
 @media (max-width: 576px) {
   .tour-title {
     font-size: 20px;
+    word-spacing: 3px;
   }
 }
 
@@ -10008,4 +10231,8 @@ p {
 
 #author {
   font-weight: bold;
+}
+
+form {
+  text-align: right;
 }
