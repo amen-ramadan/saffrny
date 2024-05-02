@@ -2,14 +2,15 @@
 .dark-mode {
   background-color: #222;
   color: #fff;
+
   hr {
     border-top: 1px solid wheat;
   }
 }
 
 .dark-mode .card {
-  background-color: #333; /* خلفية الكارد في وضع الداكن */
-  color: #fff; /* لون النص في وضع الداكن */
+  background-color: #333;
+  color: #fff;
 }
 
 // icon dark mode style
@@ -54,7 +55,7 @@
   transition: 0.3s;
 }
 
-.checkbox:checked ~ .slider {
+.checkbox:checked~.slider {
   background-color: var(--light);
 }
 
@@ -73,7 +74,7 @@
   transition: 0.3s;
 }
 
-.checkbox:checked ~ .slider::before {
+.checkbox:checked~.slider::before {
   -webkit-transform: translateX(25px);
   -ms-transform: translateX(25px);
   transform: translateX(25px);

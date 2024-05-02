@@ -1,6 +1,6 @@
 @import "./variables";
 @import "./buttonDarkMode";
-@import "./the-tourist-tour-2.scss";
+@import "./the-tourist-tour.scss";
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
 
 // global and header
@@ -8,6 +8,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
   background-color: #f8f9fa;
   color: #333;
@@ -46,6 +47,7 @@ nav {
     height: 14px;
     cursor: pointer;
     position: relative;
+
     span {
       background-color: rgb(88, 84, 84);
       height: 2px;
@@ -78,6 +80,12 @@ nav {
       line-height: 1.5;
       word-spacing: 1px;
     }
+  }
+}
+
+.nav-item {
+  .nav-link {
+    color: $primary-color;
   }
 }
 
@@ -134,7 +142,7 @@ p {
 
   @include breakpoint(mobile) {
     font-size: 14px;
-    padding: 8px; 
+    padding: 8px;
   }
 }
 
@@ -146,12 +154,6 @@ p {
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
 // index.html
-
-.nav-item {
-  .nav-link {
-    color: $primary-color;
-  }
-}
 
 // main carousel
 
@@ -166,13 +168,14 @@ p {
     height: 30vh;
   }
 
-  
+
   .carousel-inner {
     height: 100%;
 
     .carousel-item {
       position: relative;
     }
+
     img {
       height: 100%;
       object-fit: cover;
@@ -204,6 +207,7 @@ p {
           margin-top: 50px;
         }
       }
+
       .layout-description {
         margin-top: 30px;
         padding: 20px 50px;
@@ -227,90 +231,96 @@ p {
 
 #services {
   margin-top: 50px;
-}
 
-.service-item {
-  text-align: center;
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 2px solid $primary-color;
 
-  @include breakpoint(medium) {
-    height: 300px;
+  .service-item {
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid $primary-color;
+
+    @include breakpoint(medium) {
+      height: 300px;
+    }
+
+    @include breakpoint(small) {
+      height: 350px;
+      padding: 20px 10px;
+    }
+
+    @include breakpoint(mobile) {
+      height: initial;
+      padding: 20px 10px;
+    }
   }
 
-  @include breakpoint(small) {
-    height: 350px;
-    padding: 20px 10px;
+  .service-item p {
+    margin-bottom: 0;
   }
 
-  @include breakpoint(mobile) {
-    height: initial;
-    padding: 20px 10px;
+  .service-title {
+    font-weight: 700;
+    margin: 20px 0;
+
+    @include breakpoint(small) {
+      font-size: 20px;
+    }
   }
-}
 
-.service-item p {
-  margin-bottom: 0;
-}
+  .service-description {
+    font-size: 16px;
+    line-height: 1.7;
 
-.service-title {
-  font-weight: 700;
-  margin: 20px 0;
-
-  @include breakpoint(small) {
-    font-size: 20px;
+    @include breakpoint(small) {
+      font-size: 14px;
+    }
   }
-}
 
-.service-description {
-  font-size: 16px;
-  line-height: 1.7;
-
-  @include breakpoint(small) {
-    font-size: 14px;
+  .service-icon {
+    color: $primary-color;
+    font-size: 34px;
   }
-}
-
-.service-icon {
-  color: $primary-color;
-  font-size: 34px;
 }
 
 // cards
 
-.card {
-  border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-  transition: 0.3s;
-  height: 100%;
-  @include breakpoint(mobile) {
-    height: initial;
+#SightseeingTours {
+
+  .card {
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    transition: 0.3s;
+    height: 100%;
+
+    @include breakpoint(mobile) {
+      height: initial;
+    }
+  }
+
+  .card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .card-text {
+    color: #777;
+    font-size: 16px;
+  }
+
+  .card-img-top {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
   }
 }
 
-.card:hover {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px);
-}
-
-.card-title {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.card-text {
-  color: #777;
-  font-size: 16px;
-}
-
-.card-img-top {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
+// contact-us
 .contact-info {
   margin-top: 30px;
 }
@@ -319,105 +329,9 @@ p {
 iframe {
   width: 50%;
 }
-////////////////////////////////////////////////////
-////////////////////////////////////////////////////
-////////////////////////////////////////////////////
-// تنسيقات صفحات الرحلات
-
-.custom-carousel {
-  margin: 60px auto;
-  width: 70%;
-  @include breakpoint(small) {
-    width: 85%;
-  }
-  img {
-    height: 460px;
-
-    @include breakpoint(large) {
-      height: 400px;
-    }
-    @include breakpoint(small) {
-      height: 280px;
-    }
-
-    @include breakpoint(mobile) {
-      height: 230px;
-    }
-  }
-}
-
-.gallery-small-images {
-  width: 90%;
-  margin: 0 auto;
-  div {
-    width: 25%;
-    padding: 0;
-    img {
-      height: 100%;
-    }
-  }
-
-  @include breakpoint(mobile) {
-    display: none;
-  }
-}
-
-.tour-content {
-  margin: 40px 0;
-  font-size: 24px;
-  line-height: 1.8;
-  @include breakpoint(mobile) {
-    font-size: 16px;
-  }
-}
-
-.tour-title {
-  font-size: 28px;
-  font-weight: bold;
-  position: relative;
-  padding: 20px;
-  width: 50%;
-  margin: 0 auto 30px;
-  border: 2px solid $primary-color;
-  border-radius: $radius;
-  line-height: 1.8;
-
-  @include breakpoint(medium) {
-    font-size: 24px;
-    width: 75%;
-  }
-  @include breakpoint(mobile) {
-    font-size: 20px;
-    word-spacing: 3px;
-  }
-}
-
-.ordered-list {
-  text-align: right;
-
-  li {
-    list-style: none;
-    position: relative;
-    font-size: 16px;
-    line-height: 1.9;
-
-    @include breakpoint(mobile) {
-      font-size: 14px;
-    }
-
-    &::before {
-      content: "";
-      border: 10px solid;
-      position: absolute;
-      display: block;
-      top: 8px;
-      right: -18px;
-    }
-  }
-}
 
 
-// all pages
+// footer
 
 #footer {
   margin-top: 100px;

@@ -46,6 +46,22 @@ $radius: 25%;
       margin: 0 !important;
     }
 
+    nav {
+      .nav-item {
+        .nav-link {
+          color: $primary-color;
+        }
+      }
+
+      .main-icon {
+        fill: $primary-color;
+      }
+
+      .main-title {
+        color: $primary-color;
+      }
+    }
+
     .image-background {
       margin-bottom: 30px;
 
@@ -57,6 +73,7 @@ $radius: 25%;
         height: 70vh;
         width: 100%;
         position: relative;
+
         @include breakpoint(small) {
           height: 50vh;
         }
@@ -85,22 +102,6 @@ $radius: 25%;
           font-size: 20px;
         }
 
-      }
-    }
-
-    nav {
-      .nav-item {
-        .nav-link {
-          color: $primary-color;
-        }
-      }
-
-      .main-icon {
-        fill: $primary-color;
-      }
-
-      .main-title {
-        color: $primary-color;
       }
     }
 
