@@ -1,6 +1,6 @@
 ## مشروع سفرني
 
-![صورة المشروع](https://imgur.com/a/j5LombT)
+![صورة المشروع]([https://imgur.com/a/j5LombT](https://i.imgur.com/drFr6m1.png))
 
 ### نبذة عن المشروع
 
