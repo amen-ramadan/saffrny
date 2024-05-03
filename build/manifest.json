@@ -1,6 +1,9 @@
 {
   "main.css": "/css/style.css",
-  "main.js": "/js/bundle.js",
+  "main.js": "/js/main.js",
+  "js/283.js": "/js/283.js",
+  "js/236.js": "/js/236.js",
+  "js/654.js": "/js/654.js",
   "images/t6.avif": "/images/t6.avif",
   "images/section-three-2.avif": "/images/section-three-2.avif",
   "images/8.avif": "/images/8.avif",

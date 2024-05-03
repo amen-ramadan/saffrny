@@ -9,12 +9,18 @@ module.exports = {
   output: {
     publicPath: '/',
     path: path.resolve(__dirname, "build"),
-    filename: "js/bundle.js",
+    filename: "js/[name].js",
   },
   optimization: {
     minimize: true,
-    minimizer: [new TerserPlugin()],
+    minimizer: [ new TerserPlugin() ],
+    splitChunks: {
+      chunks: 'all',
+      minSize: 200 * 1024, // 200 KB
+      maxSize: 500 * 1024, // 500 KB, for example
+    },
   },
+  performance: false,
   module: {
     rules: [
       {
